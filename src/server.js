@@ -3,9 +3,6 @@ const express = require('express');
 
 const app = express();
 
-const config = require('./config');
-const db = require('./config/database');
-
 const cors = (req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', '*');
@@ -18,4 +15,7 @@ app.use(express.json());
 app.use(cors);
 app.use(require('./routes'));
 
-app.listen(config.port, console.log(`Server has started on http://localhost:${config.port}`));
+app.listen(
+  process.env.PORT,
+  console.log(`Server has started on http://localhost:${process.env.PORT}`)
+);
