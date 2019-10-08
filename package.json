@@ -1,0 +1,45 @@
+{
+  "name": "instagram-nodejs",
+  "version": "1.0.0",
+  "description": "Instagram clone API",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marceloivanofre/instagram-nodejs.git"
+  },
+  "keywords": [
+    "instagram",
+    "nodejs",
+    "api",
+    "express",
+    "mongodb"
+  ],
+  "author": "Marcelo Ivanofre",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marceloivanofre/instagram-nodejs/issues"
+  },
+  "homepage": "https://github.com/marceloivanofre/instagram-nodejs#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.3"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "nodemon": "^1.19.3"
+  }
+}
