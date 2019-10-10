@@ -1,2 +1,2 @@
-exports.SUCCESS = 'SUCCESS';
-exports.CREATED = 'CREATED';
+exports.SUCCESS = 'Success';
+exports.CREATED = 'Created';

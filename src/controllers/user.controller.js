@@ -1,6 +1,5 @@
 const User = require('../models/user.model');
 const { CREATED } = require('../utils/successTypes');
-const { INTERNAL_SERVER_ERROR } = require('../utils/errorTypes');
 
 module.exports = {
   async register(req, res) {
@@ -8,7 +7,10 @@ module.exports = {
       await User.create({ ...req.body });
       res.status(201).json({ msg: CREATED });
     } catch (error) {
-      res.status(500).json({ msg: INTERNAL_SERVER_ERROR });
+      if (error.code === 11000) {
+        res.status(400).json({ msg: 'Email already in use' });
+      }
+      res.status(500).json({ msg: 'Internal server error' });
     }
   }
 };

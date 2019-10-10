@@ -1,5 +1,5 @@
 const User = require('../models/user.model');
-const { ERR_USER_OR_PASS_INVALID, INTERNAL_SERVER_ERROR } = require('../utils/errorTypes');
+const { ERR_USER_OR_PASS_INVALID } = require('../utils/errorTypes');
 const { SUCCESS } = require('../utils/successTypes');
 
 module.exports = {
@@ -19,9 +19,9 @@ module.exports = {
     } catch (error) {
       switch (error.message) {
         case ERR_USER_OR_PASS_INVALID:
-          return res.status(400).json({ msg: ERR_USER_OR_PASS_INVALID });
+          return res.status(400).json({ msg: 'Invalid user or password' });
         default:
-          return res.status(500).json({ msg: INTERNAL_SERVER_ERROR });
+          return res.status(500).json({ msg: 'Internal server error' });
       }
     }
   }
